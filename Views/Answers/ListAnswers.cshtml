@@ -1,0 +1,12 @@
+﻿@model QuestionsAnswers
+@{
+    ViewData["Title"] = "ListAnswers";
+}
+
+<h1>List Answers</h1>
+
+@Model.ques.detail <br />
+@foreach (answers ans in Model.ans)
+            {
+                @ans.detail @ans.posted <a href="/answers/editanswer?ansid=@ans.id">Edit</a>
+            }

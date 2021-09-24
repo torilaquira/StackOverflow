@@ -1,0 +1,14 @@
+﻿@model Questions
+@{
+    ViewData["Title"] = "editquestion";
+}
+
+<h1>edit question</h1>
+
+<form method="post" action="/focdev/savequestion">
+    <input type="hidden" name="id" value="@Model.id" />
+
+    Detail: <input type="text" name="detail" value="@Model.detail" /><br />
+    
+    <input type="submit" value="Save" />
+</form>
